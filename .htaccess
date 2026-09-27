@@ -1,0 +1,15 @@
+# InfinityFree Apache Configuration for AgriTrak ERP
+DirectoryIndex index.php index.html
+
+# Disable Directory Browsing
+Options -Indexes
+
+# Set Default Charset
+AddDefaultCharset UTF-8
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
